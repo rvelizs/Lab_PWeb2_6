@@ -10,6 +10,3 @@
 - Se siguió la guía de aplicación Destinos Turísticos: [Video aquí](https://www.youtube.com/watch?v=OTmQOjsl0eg&pp=ugMICgJlcxABGAE%3D)
 - Para el control de versiones uso Git.
 <center><img src="https://1000marcas.net/wp-content/uploads/2021/06/Django-Logo-1.png" title="python" width="100"/></center>
-
-## Archivos
-Dentro de la carpeta [src](src) encontramos todos los archivos del proyecto.
