@@ -13,8 +13,16 @@ def register(request):
         password2 = request.POST['password2']
         email = request.POST['email']
         
-        user = User.objects.create_user(username = username, password = password1, email = email, first_name = first_name, last_name = last_name)
-        user.save();
-        print('¡Usuario creado!')
+        if password1 == password2:
+            if User.objects.filter(username = username).exists():
+                print('El nombre de usuario "' + username +  '" ya existe')
+            elif User.objects.filter(email = email).exists():
+                print('El correo "' + email +  '" ya está registrado')
+            else:
+                user = User.objects.create_user(username = username, password = password1, email = email, first_name = first_name, last_name = last_name)
+                user.save();
+                print('¡Usuario creado!')
+        else:
+            print('La contraseña no coincide')
         return redirect('/')
     return render(request, 'register.html')
